@@ -1,0 +1,154 @@
+
+div>div> table {
+   border-spacing: 0;
+   background: #fff;
+   font-family: Roboto,"Helvetica Neue",sans-serif;
+    border-color: grey;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    // background-repeat-x: initial;
+    // background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(255, 255, 255);
+    display: table;
+    border-collapse: separate;
+    border-top-color: grey;
+    border-right-color: grey;
+    border-bottom-color: grey;
+    border-left-color: grey;
+& {
+      box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
+& th{
+  background: inherit;
+  // border: solid 1px black;
+}
+& tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    // border: solid 1px black;
+} & tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+    // border: solid 1px black;
+    & td{
+      // border: solid 1px black;
+      padding: 0;
+    // border-bottom-width: 1px;
+    // border: 1px;
+    // border-bottom-style: solid;
+        // color: rgba(0,0,0,.87);
+        text-align: center
+    }
+}
+}
+
+.table--scrollable {
+    // display: flex;
+    flex-direction: column;
+    // flex: 1 1 auto;
+
+    table thead tr {
+      // display: table;
+    }
+
+    table {
+      // display: block;
+      // position: relative;
+      width: 100%;
+      overflow: hidden;
+      // border-collapse: collapse;
+      // margin: 0 !important;
+    }
+
+    /*thead*/
+    thead {
+      // position: relative;
+      // display: block;
+      /*seperates the header from the body allowing it to be positioned*/
+      overflow: visible;
+      z-index: 10;
+
+      th {
+        background-color: rgb(251, 209, 213);
+        // min-width: 120px;
+        height: 50px;
+        // border: 1px solid #222;
+        position: relative;
+        // z-index: 10;
+        text-align: center;
+        vertical-align: middle !important;
+
+        &:nth-child(1) {
+          /*first cell in the header*/
+          z-index: 20;
+        }
+
+        &[pru-sort-header] {
+          padding: 5px 10px !important;
+
+          .mat-sort-header-button {
+            display: inline-block;
+          }
+
+          ion-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 3px;
+          }
+        }
+      }
+    }
+
+    /*tbody*/
+    tbody {
+      // max-height: calc(100vh - 360px);
+      overflow-y: auto;
+      position: relative;
+      display: block;
+      /*seperates the tbody from the header*/
+      overflow: scroll;
+
+      td {
+        min-width: 120px;
+        height: 50px;
+        // z-index: 10;
+        // position: relative;
+
+        &:nth-child(1) {
+          /*the first cell in each tr*/
+          background-color: white;
+          left: 0;
+          // z-index: 20;
+        }
+      }
+    }
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .p-relative {
+    position: relative;
+  }
+
+  .scroll-content {
+    display: flex;
+    flex-direction: column;
+  }

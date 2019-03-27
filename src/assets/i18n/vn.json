@@ -1,0 +1,42 @@
+{
+  "Generality": {
+    "stt": "STT",
+    "region": "Region",
+    "area": "Area",
+    "guid": "Guid",
+    "isActive": "Active",
+    "balance": "Balance",
+    "picture": "Picture",
+    "openDate": "OpenDate",
+    "branch": "Branch",
+    "age": "Age",
+    "eyeColor": "Eye Color",
+    "phone": "Phone",
+    "address": "Address",
+    "about": "About",
+    "registered": "Registered",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "tags": "Tags"
+  },
+  "Targets": {
+    "TT10": "TT10",
+    "TT20": "TT20",
+    "TT30": "TT30",
+    "TT40": "TT40",
+    "TT50": "TT50",
+    "TT60": "TT60",
+    "TT70": "TT70",
+    "TT90": "TT90",
+    "TT105": "TT105"
+  },
+  "Company": {
+    "range": "Range",
+    "greeting": "Greeting",
+    "name": "Name"
+  },
+  "Friends": {
+    "id": "ID",
+    "name":"Name"
+  }
+}

@@ -1,0 +1,26 @@
+<div fxHide.xs style="padding: 5px 16px 0px 16px" class="mat-elevation-z8">
+	<div class="twbs table--scrollable pt-0" style="overflow: auto;">
+		<h2>Vertical Headings:</h2>
+		<table style="width:100%">
+      <ng-container >
+  			<tr *ngFor="let element of dataTest$; let i=index" style="border:1px solid black">
+				<th style="border:1px solid black">{{ 'Generality.stt' | translate }} </th>
+				<td style="border:1px solid black">{{element.region}}</td>
+			</tr>
+      </ng-container>
+		</table>
+		<br>
+    <br>
+		<hr>
+    <table #tableContainer>
+      <tr pruSort *ngFor="let element of rowsName; let i = index" >
+        <ng-container *ngIf="checkTable()">
+          <th>{{element}}</th>
+          <td>{{i+1}}</td>
+        </ng-container>
+        </tr>
+    </table>
+  <br>
+
+	</div>
+</div>
